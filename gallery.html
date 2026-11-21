@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>School Gallery | Hilder NPS Gulu</title>
+  <meta name="description" content="A photographic look at learning, activities and community life at Hilder Nursery and Primary School in Gulu City, Uganda.">
+  <meta name="theme-color" content="#0B2240">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="favicon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:title" content="School Gallery | Hilder NPS Gulu">
+  <meta property="og:description" content="A photographic look at learning, activities and community life at Hilder Nursery and Primary School in Gulu City, Uganda.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/web1.JPG">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="preload" as="image" href="images/web1.JPG" fetchpriority="high">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M4 6h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m7 4 12 8-12 8z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14"/><path d="M16 5v14"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="nav hero-top" id="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="images/logo.png" alt="" width="44" height="48">
+        <span>Hilder</span>
+        <span class="gold">NPS</span>
+        <span class="brand-sub">Nursery &amp; Primary</span>
+      </a>
+
+      <nav class="nav-links desktop" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="achievements.html">Our Achievements</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="gallery.html" aria-current="page">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="admissions.html" class="nav-cta">Enquire about admissions</a>
+      </nav>
+
+      <button class="menu-btn" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+
+  </header>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
+      <div class="drawer-head">
+        <a href="index.html" class="brand">
+          <img class="brand-logo" src="images/logo.png" alt="" width="44" height="48">
+          <span>Hilder</span> <span class="gold">NPS</span>
+        </a>
+        <button class="menu-btn" id="drawer-close" type="button" aria-label="Close menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+        </button>
+      </div>
+      <nav aria-label="Mobile navigation">
+        <ul class="drawer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="achievements.html">Our Achievements</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="drawer-contact">
+        <a href="tel:+256782279751">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          +256 782 279751
+        </a>
+        <span>
+          <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+          Plot 3, Kilak Road, Pece-Laroo Division, Gulu City, Uganda
+        </span>
+      </div>
+      <a href="admissions.html" class="btn btn-primary btn-block drawer-cta">Enquire about admissions</a>
+    </div>
+
+
+  <main class="main-wrap" id="main">
+    <div class="page">
+      <section class="page-hero page-hero--short">
+        <div class="page-hero-bg">
+          <img src="images/IMG_9122.JPG" width="6000" height="4000" alt="Hilder NPS pupils together" fetchpriority="high" decoding="async">
+          <div class="page-hero-mask"></div>
+        </div>
+        <div class="container page-hero-content">
+          <span class="eyebrow">Gallery</span>
+          <h1>Life at Hilder NPS</h1>
+          <p class="page-lead">35 photographs of learning, activities and community life.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="gallery-grid-title">
+        <div class="container">
+          <h2 class="sr-only" id="gallery-grid-title">Photo gallery</h2>
+          <div class="gallery-masonry" data-gallery>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 1 of 35: Learners at Hilder NPS">
+              <img src="images/web1.JPG" width="4000" height="6000" alt="Learners at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 2 of 35: School environment at Hilder NPS">
+              <img src="images/web2.JPG" width="5508" height="3312" alt="School environment at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 3 of 35: Classroom learning at Hilder NPS">
+              <img src="images/web3-1.JPG" width="4000" height="6000" alt="Classroom learning at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 4 of 35: Academic activities at Hilder NPS">
+              <img src="images/web4-1.JPG" width="3368" height="6000" alt="Academic activities at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 5 of 35: Cultural activities at Hilder NPS">
+              <img src="images/web5-1.JPG" width="3368" height="6000" alt="Cultural activities at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 6 of 35: Learners in uniform at Hilder NPS">
+              <img src="images/web6-1.JPG" width="4868" height="3308" alt="Learners in uniform at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 7 of 35: Music and drama at Hilder NPS">
+              <img src="images/web7-1.JPG" width="5856" height="3236" alt="Music and drama at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 8 of 35: Main campus at Hilder NPS">
+              <img src="images/web8-1.JPG" width="5236" height="3808" alt="Main campus at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 9 of 35: Pageya campus at Hilder NPS">
+              <img src="images/web23-1.JPG" width="4636" height="3356" alt="Pageya campus at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 10 of 35: Academic achievement at Hilder NPS">
+              <img src="images/web27-1.JPG" width="4156" height="3144" alt="Academic achievement at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 11 of 35: School event at Hilder NPS">
+              <img src="images/web28-1.JPG" width="5992" height="3200" alt="School event at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 12 of 35: Community gathering at Hilder NPS">
+              <img src="images/web29-1.JPG" width="6000" height="3368" alt="Community gathering at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 13 of 35: Learners engaged in class">
+              <img src="images/IMG_3405.JPG" width="3368" height="6000" alt="Learners engaged in class" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 14 of 35: School assembly">
+              <img src="images/IMG_3406.JPG" width="3368" height="6000" alt="School assembly" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 15 of 35: Classroom interaction">
+              <img src="images/IMG_3407.JPG" width="3368" height="6000" alt="Classroom interaction" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 16 of 35: School grounds">
+              <img src="images/IMG_3418.JPG" width="3368" height="6000" alt="School grounds" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 17 of 35: Nursery learners">
+              <img src="images/IMG_3506.JPG" width="6000" height="3368" alt="Nursery learners" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 18 of 35: Pupils in an activity">
+              <img src="images/IMG_3569.JPG" width="3368" height="6000" alt="Pupils in an activity" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 19 of 35: Learners smiling">
+              <img src="images/IMG_3570.JPG" width="3368" height="6000" alt="Learners smiling" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 20 of 35: Teacher and pupils">
+              <img src="images/IMG_3572.JPG" width="3368" height="6000" alt="Teacher and pupils" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 21 of 35: Cultural performance">
+              <img src="images/IMG_3574.JPG" width="3368" height="6000" alt="Cultural performance" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 22 of 35: Learners in uniform">
+              <img src="images/IMG_3575.JPG" width="4608" height="3204" alt="Learners in uniform" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 23 of 35: School celebration">
+              <img src="images/IMG_3578.JPG" width="6000" height="3368" alt="School celebration" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 24 of 35: Traditional dress">
+              <img src="images/IMG_3781.JPG" width="4356" height="2808" alt="Traditional dress" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 25 of 35: Learners studying">
+              <img src="images/IMG_3782.JPG" width="6000" height="3368" alt="Learners studying" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 26 of 35: School event">
+              <img src="images/IMG_8399.JPG" width="6000" height="4000" alt="School event" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 27 of 35: Pupils at Hilder NPS">
+              <img src="images/IMG_8400.JPG" width="6000" height="4000" alt="Pupils at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 28 of 35: Learners together">
+              <img src="images/IMG_8437.JPG" width="6000" height="3368" alt="Learners together" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 29 of 35: School activities">
+              <img src="images/IMG_8449.JPG" width="6000" height="3368" alt="School activities" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 30 of 35: Cultural event">
+              <img src="images/IMG_8450.JPG" width="6000" height="3368" alt="Cultural event" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 31 of 35: Learners outdoors">
+              <img src="images/IMG_8456.JPG" width="6000" height="4000" alt="Learners outdoors" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 32 of 35: School community">
+              <img src="images/IMG_8461.JPG" width="6000" height="4000" alt="School community" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 33 of 35: Learners in class">
+              <img src="images/IMG_8484.JPG" width="6000" height="4000" alt="Learners in class" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 34 of 35: Event at Hilder NPS">
+              <img src="images/IMG_8603.JPG" width="6000" height="4000" alt="Event at Hilder NPS" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+            <button class="gallery-item reveal-on-scroll" type="button" data-gallery-item aria-label="Open image 35 of 35: Hilder NPS learners">
+              <img src="images/IMG_9122.JPG" width="6000" height="4000" alt="Hilder NPS learners" loading="lazy" decoding="async">
+              <span class="gallery-overlay">View</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <dialog class="lightbox" id="lightbox" aria-label="Hilder NPS photo viewer">
+        <div class="lightbox-inner">
+          <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">
+            <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+          </button>
+          <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Previous image">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="#i-arrow-left"></use></svg>
+          </button>
+          <img class="lightbox-img" data-lightbox-img src="images/web1.JPG" alt="Learners at Hilder NPS">
+          <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Next image">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </button>
+          <div class="lightbox-caption">
+            <span data-lightbox-count>1 / 35</span>
+            <span data-lightbox-caption>Learners at Hilder NPS</span>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img class="brand-logo" src="images/logo.png" alt="" width="44" height="48"><span>Hilder</span> <span class="gold">NPS</span></a>
+        <p>Hilder Nursery and Primary School provides quality early childhood and primary education in Gulu City, Uganda: daycare, nursery (K1-K3) and Primary One to Seven, with day and boarding options. Established 2010.</p>
+        <div class="footer-socials">
+          <a href="tel:+256782279751" class="social" aria-label="Call Hilder NPS">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+          </a>
+          <span class="social social-disabled" title="Official social links will be added once supplied" aria-hidden="true">
+            <svg class="icon" aria-hidden="true"><use href="#i-share"></use></svg>
+          </span>
+          <span class="footer-social-note">Official social links to be added once supplied.</span>
+        </div>
+      </div>
+
+      <div>
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="achievements.html">Our Achievements</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Our School</h2>
+        <ul>
+          <li><a href="environment.html">Learning Environment</a></li>
+          <li><a href="activities.html">Arts &amp; Culture</a></li>
+          <li><a href="campuses.html">Our Campuses</a></li>
+          <li><a href="academics.html#programmes">Daycare</a></li>
+          <li><a href="academics.html#programmes">Nursery (K1-K3)</a></li>
+          <li><a href="academics.html#programmes">Primary One to Seven</a></li>
+          <li><a href="academics.html#programmes">Day &amp; Boarding</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <ul class="footer-contact">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+            <span>Plot 3, Kilak Road, Pece-Laroo Division, Gulu City, Uganda</span>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            <a href="tel:+256782279751">+256 782 279751</a>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+            <span>Email: to be supplied</span>
+          </li>
+        </ul>
+        <a href="admissions.html" class="btn btn-secondary btn-sm footer-cta">Admissions Enquiry</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Copyright <span id="current-year">2026</span> Hilder Nursery and Primary School. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
