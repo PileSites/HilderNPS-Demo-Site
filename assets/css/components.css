@@ -67,84 +67,20 @@
 .hero-image-mask {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 4% 96%, rgba(255, 107, 87, 0.34), transparent 42%),
-    radial-gradient(circle at 88% 6%, rgba(18, 184, 166, 0.22), transparent 40%),
-    linear-gradient(
-      100deg,
-      rgba(8, 24, 48, 0.94) 0%,
-      rgba(10, 31, 60, 0.68) 48%,
-      rgba(31, 111, 235, 0.24) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(38, 55, 70, 0.91) 0%,
+    rgba(38, 55, 70, 0.68) 48%,
+    rgba(54, 143, 199, 0.17) 100%
+  );
 }
 
-/* With tiles the gradient moves onto each tile, so an incoming slide
-   no longer darkens the photograph it is covering. */
-.hero-image-wrap.has-tiles .hero-image-mask {
-  opacity: 0;
-}
-
-/* Split-image transition. Each tile clips one slice of the same
-   cover-fitted photograph, so the seams line up exactly. Tiles are
-   one pixel larger than their cell so neighbouring slices overlap and
-   no antialiasing seam shows between them. */
-.hero-image-wrap.has-tiles > img {
-  opacity: 0;
-}
-
-.hero-tiles {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.hero-tile {
-  position: absolute;
-  left: calc(var(--col) * 100% / var(--cols));
-  top: calc(var(--row) * 100% / var(--rows));
-  width: calc(100% / var(--cols) + 1px);
-  height: calc(100% / var(--rows) + 1px);
-  overflow: hidden;
-  clip-path: inset(100% 0 0 0);
-}
-
-.hero-tile img {
-  position: absolute;
-  width: calc(var(--cols) * 100% - var(--cols) * 1px);
-  height: calc(var(--rows) * 100% - var(--rows) * 1px);
-  max-width: none;
-  left: calc(var(--col) * -100% + var(--col) * 1px);
-  top: calc(var(--row) * -100% + var(--row) * 1px);
-  object-fit: cover;
-  object-position: center 24%;
-}
-
-.hero-tile::after {
-  content: "";
-  position: absolute;
-  width: calc(var(--cols) * 100% - var(--cols) * 1px);
-  height: calc(var(--rows) * 100% - var(--rows) * 1px);
-  left: calc(var(--col) * -100% + var(--col) * 1px);
-  top: calc(var(--row) * -100% + var(--row) * 1px);
-  background:
-    radial-gradient(circle at 4% 96%, rgba(255, 107, 87, 0.34), transparent 42%),
-    radial-gradient(circle at 88% 6%, rgba(18, 184, 166, 0.22), transparent 40%),
-    linear-gradient(
-      100deg,
-      rgba(8, 24, 48, 0.94) 0%,
-      rgba(10, 31, 60, 0.68) 48%,
-      rgba(31, 111, 235, 0.24) 100%
-    );
-  pointer-events: none;
-}
-
-@keyframes hero-tile-in {
+@keyframes hero-image-in {
   from {
-    clip-path: inset(100% 0 0 0);
+    opacity: 0;
   }
   to {
-    clip-path: inset(0 0 0 0);
+    opacity: 1;
   }
 }
 
@@ -170,18 +106,12 @@
   }
 }
 
-.hero-slide.is-active .hero-tile {
-  animation: hero-tile-in 0.75s var(--ease) both;
-  animation-delay: calc(var(--i) * 30ms);
-}
-
-.hero-slide.is-previous .hero-tile {
-  clip-path: inset(0 0 0 0);
+.hero-slide.is-active .hero-image-wrap img {
+  animation: hero-image-in 0.7s ease both;
 }
 
 .hero-slide.is-active .hero-content {
-  animation: hero-content-in 0.8s var(--ease) both;
-  animation-delay: 0.4s;
+  animation: hero-content-in 0.55s var(--ease) both;
 }
 
 .hero-slide.is-previous .hero-content {
@@ -189,10 +119,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-slide.is-active .hero-tile,
-  .hero-slide.is-previous .hero-tile {
+  .hero-slide.is-active .hero-image-wrap img {
     animation: none;
-    clip-path: none;
+    opacity: 1;
   }
 
   .hero-slide.is-active .hero-content {

@@ -92,27 +92,17 @@ every page, plus the browser tab icons.
 
 ### Enquiry forms
 
-`assets/js/forms.js` validates the admissions and contact forms. When a form
-has a `data-endpoint`, the enquiry is posted there with `fetch()` and the
-visitor never leaves the page. Without an endpoint it falls back to opening
-the visitor's email app with a pre-filled message.
-
-The admissions form currently posts to:
+`assets/js/forms.js` validates the admissions and contact forms. Forms marked
+with `data-whatsapp` open a properly encoded WhatsApp enquiry:
 
 ```html
 <form class="form" data-enquiry-form data-subject="Admissions Enquiry"
-      data-recipient="kitarapromise34@gmail.com"
-      data-endpoint="https://formspree.io/f/xrpqkwpq"
-      novalidate>
+      data-whatsapp="256782279751" novalidate>
 ```
 
-That endpoint is [Formspree](https://formspree.io), a form-to-email service.
-It needs no activation step. Submissions pass through Formspree's servers, so
-review their privacy terms before launch and replace the temporary inbox and
-form with the school's own when possible.
-
-`data-recipient` is still used in the failure message. `forms.js` detects a
-`formspree.io` endpoint and omits the FormSubmit-only options automatically.
+This backend-free flow prepares the complete enquiry for the verified school
+telephone number; the visitor explicitly sends it from WhatsApp. No temporary
+email provider or submitted form service is used.
 
 The contact form has no endpoint yet, so it still opens a blank recipient
 (`mailto:?...`). The phone number `+256 782 279751` remains the primary contact

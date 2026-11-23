@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/ui-polish.css">
   <link rel="preload" as="image" href="images/web2.JPG" fetchpriority="high">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/forms.js" defer></script>
@@ -149,8 +150,7 @@
               </div>
             </aside>
 
-            <!-- Sends through Formspree; replace this endpoint when the school inbox is ready. -->
-            <form class="form reveal-on-scroll" data-enquiry-form data-subject="Admissions Enquiry" data-recipient="kitarapromise34@gmail.com" data-endpoint="https://formspree.io/f/xrpqkwpq" novalidate>
+            <form class="form reveal-on-scroll" data-enquiry-form data-subject="Admissions Enquiry" data-whatsapp="256782279751" novalidate>
               <div class="notice" data-form-notice role="status" aria-live="polite" tabindex="-1" hidden></div>
               <noscript>
                 <p class="notice success">Online enquiries need JavaScript. Please call <a href="tel:+256782279751">+256 782 279751</a> instead.</p>
@@ -196,6 +196,14 @@
                 <select id="section" name="section" required>
                   <option value="Day" selected>Day</option>
                   <option value="Boarding">Boarding</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="campus">Preferred campus</label>
+                <select id="campus" name="campus">
+                  <option value="Main Campus" selected>Main Campus</option>
+                  <option value="Pageya Campus">Pageya Campus</option>
                 </select>
               </div>
 

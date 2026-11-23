@@ -5,48 +5,40 @@
    ============================================================ */
 
 :root {
-  --navy: #0a1f3c;
-  --navy-2: #102c53;
-  --royal: #1f6feb;
-  --gold: #ffc531;
-  --gold-soft: #ffe08a;
-  --gold-ink: #8a5a00;
+  --navy: #263746;
+  --navy-2: #59636e;
+  --royal: #368fc7;
+  --gold: #75bde8;
+  --gold-soft: #dceffa;
+  --gold-ink: #368fc7;
 
   /* Bright supporting colours. Every bright fill is paired with navy text. */
-  --coral: #ff6b57;
-  --coral-soft: #ffe1db;
-  --coral-ink: #a83226;
-  --teal: #12b8a6;
-  --teal-soft: #d6f7f2;
-  --teal-ink: #0b6b5f;
-  --sky: #55c2f5;
-  --sky-soft: #e1f3ff;
-  --blue-ink: #1a4fa0;
-  --violet: #7c5cff;
+  --coral: #368fc7;
+  --coral-soft: #dceffa;
+  --coral-ink: #368fc7;
+  --teal: #75bde8;
+  --teal-soft: #dceffa;
+  --teal-ink: #368fc7;
+  --sky: #75bde8;
+  --sky-soft: #dceffa;
+  --blue-ink: #368fc7;
+  --violet: #368fc7;
 
-  --ivory: #fffbf2;
-  --light-blue: #f1f8ff;
-  --charcoal: #17202b;
-  --muted: #5b6a7c;
-  --muted-strong: #405064;
+  --ivory: #ffffff;
+  --light-blue: #eef1f4;
+  --charcoal: #263746;
+  --muted: #59636e;
+  --muted-strong: #263746;
   --white: #ffffff;
 
-  --gradient-sun: linear-gradient(135deg, #ffd76a 0%, #ffc531 45%, #ffb300 100%);
-  --gradient-coral: linear-gradient(135deg, #ff8a6b 0%, #ff5a7a 100%);
-  --gradient-teal: linear-gradient(135deg, #35e0c8 0%, #10a8d8 100%);
-  --gradient-royal: linear-gradient(135deg, #4f8dff 0%, #7c5cff 100%);
+  --gradient-sun: linear-gradient(135deg, #75bde8 0%, #368fc7 100%);
+  --gradient-coral: linear-gradient(135deg, #75bde8 0%, #368fc7 100%);
+  --gradient-teal: linear-gradient(135deg, #dceffa 0%, #75bde8 100%);
+  --gradient-royal: linear-gradient(135deg, #368fc7 0%, #75bde8 100%);
 
   /* One shared rainbow used by every accent edge. Warm to cool through
      pink and violet, so no complementary pair sits side by side. */
-  --gradient-spectrum: linear-gradient(
-    90deg,
-    #ffc531 0%,
-    #ff9f1c 18%,
-    #ff6b57 40%,
-    #ff5a7a 56%,
-    #a78bff 76%,
-    #55c2f5 100%
-  );
+  --gradient-spectrum: linear-gradient(90deg, #75bde8 0%, #368fc7 100%);
   --glow-gold: 0 16px 38px rgba(255, 197, 49, 0.34);
   --glow-coral: 0 16px 38px rgba(255, 107, 87, 0.28);
 
@@ -487,8 +479,8 @@ body.scroll-locked .scroll-progress {
 /* ---------- Scroll reveal ---------- */
 .js .reveal-on-scroll,
 .js .reveal-img {
-  opacity: 0;
-  transform: translateY(36px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
   transition-delay: var(--reveal-delay, 0s);
   will-change: opacity, transform;

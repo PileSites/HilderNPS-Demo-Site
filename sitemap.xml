@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace https://example.com with the live domain before publishing. -->
+<!-- Live GitHub Pages deployment -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/about.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/about.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/academics.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/academics.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/achievements.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/achievements.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/environment.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/environment.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://example.com/activities.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/activities.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://example.com/campuses.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/campuses.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://example.com/gallery.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/gallery.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/admissions.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/admissions.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://example.com/contact.html</loc>
+    <loc>https://pilesites.github.io/HilderNPS-Demo-Site/contact.html</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>

@@ -1,8 +1,8 @@
 /* ============================================================
    HILDER NPS - forms.js
    Admissions and contact enquiry forms: accessible validation,
-   AJAX delivery when data-endpoint is set, otherwise a mailto
-   hand-off. See README.md for the email set-up.
+   Encodes enquiries for WhatsApp when data-whatsapp is set.
+   See README.md for the enquiry setup.
    ============================================================ */
 
 (function () {
@@ -29,6 +29,7 @@
     var submitting = false;
     var endpoint = (form.getAttribute('data-endpoint') || '').trim();
     var recipient = (form.getAttribute('data-recipient') || '').trim();
+    var whatsapp = (form.getAttribute('data-whatsapp') || '').trim();
 
     var fields = {
       parent: form.elements.parent,
@@ -36,6 +37,7 @@
       email: form.elements.email,
       childClass: form.elements.childClass,
       section: form.elements.section,
+      campus: form.elements.campus,
       message: form.elements.message,
     };
 
@@ -353,27 +355,25 @@
           (fields.message.value.trim() || 'N/A')
       );
 
-      if (endpoint && typeof window.fetch === 'function') {
-        var isFormspree = endpoint.indexOf('formspree.io') !== -1;
-        var payload = {
-          _subject: subjectLabel + ' - ' + fields.childClass.value + ' (' + fields.section.value + ')',
-          'Parent/Guardian': fields.parent.value.trim(),
-          Telephone: fields.phone.value.trim(),
-          Email: fields.email.value.trim() || 'Not provided',
-          'Intended class': fields.childClass.value,
-          'Preferred section': fields.section.value,
-          Message: fields.message.value.trim() || 'Not provided',
-        };
-
-        /* FormSubmit-only options; Formspree would just echo them into the email. */
-        if (!isFormspree) {
-          payload._template = 'table';
-          payload._captcha = 'false';
-        }
-
-        if (fields.email.value.trim()) payload._replyto = fields.email.value.trim();
-
-        sendEnquiry(payload);
+      if (whatsapp) {
+        var whatsappMessage =
+          subjectLabel + '\n\n' +
+          'Parent/Guardian: ' + fields.parent.value.trim() + '\n' +
+          'Telephone: ' + fields.phone.value.trim() + '\n' +
+          'Email: ' + (fields.email.value.trim() || 'Not provided') + '\n' +
+          'Intended class: ' + fields.childClass.value + '\n' +
+          'Preferred section: ' + fields.section.value + '\n\n' +
+          'Preferred campus: ' + (fields.campus ? fields.campus.value : 'Main Campus') + '\n\n' +
+          'Message:\n' + (fields.message.value.trim() || 'Not provided');
+        var whatsappUrl = 'https://wa.me/' + whatsapp + '?text=' + encodeURIComponent(whatsappMessage);
+        setSubmitting(true);
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        showNotice('success', 'Your enquiry is ready in WhatsApp. Send the prepared message to Hilder NPS.');
+        form.reset();
+        clearFieldErrors();
+        window.setTimeout(function () {
+          setSubmitting(false);
+        }, 1500);
         return;
       }
 

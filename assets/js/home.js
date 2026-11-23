@@ -1,6 +1,6 @@
 /* ============================================================
    HILDER NPS - home.js
-   Home page only: tiled hero slideshow + stat count-up.
+   Home page only: hero slideshow + stat count-up.
    ============================================================ */
 
 (function () {
@@ -36,9 +36,7 @@
     var focusWithin = false;
     var touchStartX = null;
     var preloaded = [];
-    var transitionDuration = 1250;
-    var tileColumns = 4;
-    var tileRows = 3;
+    var transitionDuration = 700;
 
     slides.forEach(function (slide, slideIndex) {
       if (slide.classList.contains('is-active')) index = slideIndex;
@@ -54,48 +52,6 @@
       slide.setAttribute('inert', '');
     };
 
-    var buildTiles = function (slide) {
-      var wrap = $('.hero-image-wrap', slide);
-      if (!wrap || $('.hero-tiles', wrap)) return;
-
-      var source = imageFor(slide);
-      var src = source && (source.currentSrc || source.getAttribute('src'));
-      if (!src) return;
-
-      var tiles = document.createElement('div');
-      tiles.className = 'hero-tiles';
-      tiles.setAttribute('aria-hidden', 'true');
-
-      for (var row = 0; row < tileRows; row += 1) {
-        for (var column = 0; column < tileColumns; column += 1) {
-          var tile = document.createElement('span');
-          tile.className = 'hero-tile';
-          tile.style.setProperty('--col', column);
-          tile.style.setProperty('--row', row);
-          tile.style.setProperty('--cols', tileColumns);
-          tile.style.setProperty('--rows', tileRows);
-          tile.style.setProperty('--i', row * tileColumns + column);
-
-          var tileImage = document.createElement('img');
-          tileImage.src = src;
-          tileImage.alt = '';
-          tileImage.decoding = 'async';
-          tileImage.setAttribute('aria-hidden', 'true');
-          tile.appendChild(tileImage);
-          tiles.appendChild(tile);
-        }
-      }
-
-      var mask = $('.hero-image-mask', wrap);
-      if (mask) {
-        wrap.insertBefore(tiles, mask);
-      } else {
-        wrap.appendChild(tiles);
-      }
-
-      wrap.classList.add('has-tiles');
-    };
-
     var preloadSlide = function (slide) {
       if (!slide) return;
       var slideIndex = slides.indexOf(slide);
@@ -108,34 +64,6 @@
       preloaded[slideIndex] = new Image();
       preloaded[slideIndex].decoding = 'async';
       preloaded[slideIndex].src = src;
-    };
-
-    /* Build the next slide's tiles early and decode them, so the image
-       is ready the moment the transition starts. */
-    var warmed = [];
-    var warmTimer = null;
-
-    var warmSlide = function (slide) {
-      if (!slide) return;
-      var slideIndex = slides.indexOf(slide);
-      if (slideIndex < 0 || warmed[slideIndex]) return;
-
-      buildTiles(slide);
-
-      var images = $$('.hero-tile img', slide);
-      if (!images.length) return;
-
-      warmed[slideIndex] = images.map(function (image) {
-        return image.decode ? image.decode().catch(function () {}) : Promise.resolve();
-      });
-    };
-
-    var scheduleWarm = function () {
-      if (warmTimer !== null) window.clearTimeout(warmTimer);
-      warmTimer = window.setTimeout(function () {
-        warmTimer = null;
-        warmSlide(slides[(index + 1) % slides.length]);
-      }, 600);
     };
 
     var renderDots = function () {
@@ -204,7 +132,6 @@
       var settleDelay = prefersReducedMotion.matches ? 80 : transitionDuration;
 
       preloadSlide(incoming);
-      buildTiles(incoming);
 
       slides.forEach(function (slide) {
         if (slide !== outgoing && slide !== incoming) setHidden(slide);
@@ -232,7 +159,6 @@
       cleanupTimer = window.setTimeout(function () {
         if (outgoing) outgoing.classList.remove('is-previous');
         cleanupTimer = null;
-        scheduleWarm();
       }, settleDelay);
 
       if (restart) startTimer();
@@ -252,7 +178,6 @@
         slide.classList.remove('is-previous');
         slide.setAttribute('aria-hidden', 'false');
         slide.removeAttribute('inert');
-        buildTiles(slide);
       } else {
         setHidden(slide);
       }
@@ -262,7 +187,6 @@
     preloadSlide(slides[(index + 1) % slides.length]);
     updateToggle();
     startTimer();
-    scheduleWarm();
 
     if (previousButton) {
       previousButton.addEventListener('click', function () {

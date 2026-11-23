@@ -30,6 +30,10 @@
   note.setAttribute('aria-atomic', 'true');
 
   var animateValue = function (target) {
+    if (target === 0) {
+      value.textContent = 'PLE';
+      return;
+    }
     if (animation !== null) window.cancelAnimationFrame(animation);
 
     if (prefersReducedMotion.matches) {
@@ -81,12 +85,10 @@
     });
 
     animateValue(Number(count) || 0);
-    note.textContent =
-      year +
-      ' PLE cycle: ' +
-      (isHighlight
-        ? '100% Division One'
-        : (Number(count) || 0) + ' Division One' + (extra ? ', ' + extra : ''));
+    var countNumber = Number(count) || 0;
+    note.textContent = countNumber
+      ? year + ' PLE cycle: ' + count + ' Division One' + (extra ? ', ' + extra : '')
+      : 'Official PLE results are available directly from the school.';
 
     if (moveFocus) button.focus();
   };
